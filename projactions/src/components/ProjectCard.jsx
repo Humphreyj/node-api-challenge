@@ -7,6 +7,7 @@ const Project = (props) => {
             <h3>{props.name}</h3>
             <p>{props.description}</p>
             <p>{props.completed}</p>
+            
         </div>
     );
 }

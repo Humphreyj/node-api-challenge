@@ -2,6 +2,23 @@ import React,{ useState, useEffect } from 'react';
 import ProjectCard from './ProjectCard';
 import axios from 'axios';
 import {Link} from 'react-router-dom';
+import styled from 'styled-components';
+
+
+const Div = styled.div`
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+width: 80%:
+margin: 0 auto;
+
+a {
+    color: black;
+    margin-top: 1.5em;
+    
+}
+`
 
 const Projects = () => {
 
@@ -20,7 +37,7 @@ const Projects = () => {
 
     }, [])
     return (
-        <div>
+        <Div>
             
              {projects ? projects.map(project => (
                     <ProjectDetails
@@ -32,7 +49,7 @@ const Projects = () => {
                 )
             ): <h1>There are no projects!</h1> } 
             
-        </div>
+        </Div>
     );
 }
 
