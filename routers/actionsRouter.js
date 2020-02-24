@@ -17,7 +17,11 @@ router.get('/:id', (req, res) => {
     const {id} = req.params;
     data.get(id)
     .then(response => {
-        res.status(200).json(response);
+        if(response === null) {
+            res.status(404).json({message: 'Project not found'})
+        }else {
+            res.status(200).json(resposne)
+        }
     })
     .catch(err => {
         res.statusCode(500).json({message:"Big time error."})
