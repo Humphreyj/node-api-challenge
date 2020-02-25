@@ -20,7 +20,7 @@ router.get('/:id', (req, res) => {
         if(response === null) {
             res.status(404).json({message: 'Project not found'})
         }else {
-            res.status(200).json(resposne)
+            res.status(200).json(response)
         }
     })
     .catch(err => {
